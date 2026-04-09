@@ -10,7 +10,7 @@ CFLAGS += -I../../karamel/krmllib/dist/minimal
 
 all: $(patsubst %.c,%.test,$(SOURCES))
 
-%.exe: %.o ../../gcc-compatible/libevercrypt.a $(KRML_LIBDIR)/dist/generic/libkrmllib.a
+%.exe: %.o ../../gcc-compatible/libevercrypt.a $(KRML_HOME)/krmllib/dist/generic/libkrmllib.a
 	$(CC) $^ -o $@
 
 .PHONY: .test
