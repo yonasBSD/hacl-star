@@ -59,7 +59,8 @@ make -C tests -j test
 # intrinsics for x86 in cpu cycle count routines in testlib.c
 pushd dist/test/c/
 git clone https://github.com/fstarlang/karamel --depth 10
-export KRML_HOME=$(pwd)/karamel
+export KRML_LIBDIR=$(pwd)/karamel/krmllib
+export KRML_INCLUDEDIR=$(pwd)/karamel/include
 make -C karamel/krmllib/dist/generic -f Makefile.basic -j
 make -j -k
 popd
